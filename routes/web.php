@@ -14,3 +14,19 @@
 Route::get('/', function () {
     return view('contenido/contenido');
 });
+
+/*Categorias*/
+
+Route::get('/categoria', 'CategoriaController@index');
+Route::post('/categoria/registrar', 'CategoriaController@store');
+Route::put('/categoria/actualizar', 'CategoriaController@update');
+Route::put('/categoria/desactivar', 'CategoriaController@desactivar');
+Route::put('/categoria/activar', 'CategoriaController@activar');
+
+/*Articulos*/
+
+Route::get('/articulos', 'ArticuloController@index');
+Route::post('/articulos/registrar', 'ArticuloController@store');
+Route::put('/articulos/actualizar', 'ArticuloController@update');
+Route::put('/articulos/desactivar', 'ArticuloController@desactivar');
+Route::put('/articulos/activar', 'ArticuloController@activar');
